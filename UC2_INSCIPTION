@@ -1,0 +1,27 @@
+@startuml
+!theme spacelab
+|Utilisateur|
+start
+:Accéder à la page d'inscription;
+:Remplir les informations requises (nom, courriel, mot de passe, etc.);
+:Soumettre le formulaire;
+|Site web Igame|
+:Recevoir les données du formulaire;
+:Vérifier la validité des données;
+if (Données valides?) then (Oui)
+  :Créer un nouvel utilisateur dans la base de données;
+  :Envoyer un courriel de confirmation;
+  |Utilisateur|
+  :Recevoir le courriel de confirmation;
+  :Confirmer l'adresse courriel via le lien fourni;
+  |Site web Igame|
+  :Activer le compte utilisateur;
+else (Non)
+  :Retourner un message d'erreur (ex: données invalides);
+  :Afficher le message d'erreur;
+  |Utilisateur|
+
+   :Corriger et soumettre à nouveau;
+endif
+stop
+@enduml
