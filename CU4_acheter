@@ -1,0 +1,31 @@
+@startuml
+!theme spacelab
+|Utilisateur|
+start
+:Se connecter à son compte;
+:Accéder à la section "Boutique de jeux";
+:Parcourir la liste des jeux disponibles;
+|Site web Igame|
+:Afficher les jeux disponibles avec leurs descriptions et prix;
+|Utilisateur|
+if (Ajouter un jeu au panier?) then (Oui)
+  :Ajouter le jeu au panier;
+  |Site web Igame|
+  :Mettre à jour le panier de l'utilisateur;
+  |Utilisateur|
+  if (Procéder au paiement?) then (Oui)
+    :Confirmer l'achat;
+    |Site web Igame|
+    :Traiter le paiement;
+    :Ajouter le jeu à la bibliothèque de l'utilisateur;
+    :Envoyer un courriel de confirmation;
+    |Utilisateur|
+    :Afficher un message "Achat réussi";
+  else (Non)
+    :Continuer à parcourir les jeux;
+  endif
+else (Non)
+  :Continuer à parcourir les jeux;
+endif
+stop
+@enduml
