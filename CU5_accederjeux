@@ -1,0 +1,27 @@
+@startuml
+!theme spacelab
+|Utilisateur|
+start
+:Se connecter à son compte;
+:Accéder à la section "Ma bibliothèque de jeux";
+|Site web Igame|
+:Vérifier l'authentification de l'utilisateur;
+if (Utilisateur authentifié?) then (Oui)
+  :Afficher la liste des jeux possédés par l'utilisateur;
+  |Utilisateur|
+  :Parcourir la bibliothèque;
+  if (Sélectionner un jeu?) then (Oui)
+    :Lancer ou télécharger le jeu;
+    |Site web Igame|
+    :Rediriger vers la page ou application correspondante;
+    |Utilisateur|
+    :Utiliser le jeu;
+  else (Non)
+    :Quitter la section bibliothèque;
+  endif
+else (Non)
+  |Site web Igame|
+  :Afficher un message d'erreur "Connexion requise";
+endif
+stop
+@enduml
