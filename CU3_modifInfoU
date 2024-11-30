@@ -1,0 +1,25 @@
+@startuml
+!theme spacelab
+|Utilisateur|
+start
+:Se connecter à son compte;
+:Accéder à la section "Mon profil";
+:Modifier les informations souhaitées (description, réseaux sociaux, etc.);
+:Soumettre les modifications;
+|Site web Igame|
+:Recevoir les données modifiées;
+:Vérifier la validité des nouvelles données;
+if (Données valides?) then (Oui)
+  :Mettre à jour les informations utilisateur dans la base de données;
+  :Retourner un message de confirmation;
+  |Utilisateur|
+  :Afficher "Profil mis à jour avec succès";
+else (Non)
+  |Site web Igame|
+  :Retourner un message d'erreur (ex: données invalides);
+  :Afficher le message d'erreur;
+  |Utilisateur|
+  :Corriger et soumettre à nouveau;
+endif
+stop
+@enduml
