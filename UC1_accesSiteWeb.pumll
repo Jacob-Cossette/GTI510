@@ -1,0 +1,20 @@
+@startuml
+!theme spacelab
+|Utilisateur|
+start
+:Accéder à l'URL principale du site;
+|Site web Igame|
+:Recevoir la requête;
+:Vérifier l'accessibilité du serveur;
+if (Serveur accessible?) then (Oui)
+  :Charger la page d'accueil; 
+  :Afficher les options (Blogue, Réseaux sociaux, Jeux);
+  |Utilisateur|
+  :Naviguer entre les sections disponibles;
+else (Non)
+  |Site web Igame|
+  :Retourner un message d'erreur (503 Service indisponible);
+  :Afficher un message "Site non disponible";
+endif
+stop
+@enduml
