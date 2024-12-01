@@ -1,0 +1,27 @@
+@startuml
+!theme spacelab
+|Utilisateur|
+start
+:Accéder au site web Igame;
+:Cliquer sur le lien "Rejoindre la communauté Discord";
+|Site web Igame|
+:Rediriger vers Discord;
+|Discord|
+:Se connecter à Discord (si nécessaire);
+:Accéder à la communauté Igame;
+:Sélectionner un utilisateur de la communauté Igame;
+|Utilisateur|
+:Choisir entre texte ou appel vocal;
+|Discord|
+if (Choix de communication est texte?) then (Oui)
+  :Ouvrir une fenêtre de discussion texte;
+  :Envoyer un message texte;
+else (Non)
+  :Ouvrir une fenêtre d'appel vocal;
+  :Lancer l'appel vocal;
+  :Attendre que l'autre utilisateur réponde;
+  |Utilisateur|
+  :Discuter;
+endif
+stop
+@enduml
