@@ -1,0 +1,20 @@
+@startuml
+!theme spacelab
+|Utilisateur|
+start
+:Accéder au bas de la page d'accueil;
+:Entrer une adresse courriel dans le champ dédié;
+:Cliquer sur le bouton "S'abonner";
+|Site web Igame|
+:Vérifier la validité de l'adresse courriel;
+if (Adresse valide?) then (Oui)
+  :Enregistrer l'adresse dans la base de données;
+  :Afficher un message "Abonnement réussi";
+  |Utilisateur|
+  :confirmation de l'abonnement;
+  |Site web Igame|
+else (Non)
+  :Afficher un message d'erreur "Adresse invalide";
+endif
+stop
+@enduml
