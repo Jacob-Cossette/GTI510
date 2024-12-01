@@ -1,0 +1,20 @@
+@startuml
+!theme spacelab
+|Admin|
+start
+:Accéder au tableau de bord administrateur de Wix Studio;
+|Wix Studio|
+:Se connecter (si nécessaire);
+:Accéder à la section Thématique ou Design;
+|Admin|
+:Sélectionner le modèle de design à modifier;
+:Effectuer les modifications souhaitées (couleurs, polices, disposition, etc.);
+|Wix Studio|
+:Prévisualiser les changements effectués;
+:Vérifier l'aperçu du nouveau design;
+|Admin|
+:Confirmer l'enregistrement des modifications;
+|Wix Studio|
+:Appliquer les modifications sur le site en ligne;
+stop
+@enduml
