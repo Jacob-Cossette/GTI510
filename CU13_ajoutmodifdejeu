@@ -1,0 +1,31 @@
+@startuml
+!theme spacelab
+|Admin|
+start
+:Accéder au tableau de bord administrateur de Wix Studio;
+|Wix Studio|
+:Se connecter (si nécessaire);
+:Accéder à la section e-commerce ou Gestion des produits;
+|Admin|
+partition Choix d'action {
+  :Choisir une action : Ajout, Modification ou Suppression de jeu;
+  if (Ajout de jeu?) then (Oui)
+    :Ajouter un nouveau jeu;
+    :Saisir les informations du jeu (titre, description, prix, image, etc.);
+  elseif (Modification de jeu?) then (Oui)
+    :Sélectionner le jeu à modifier;
+    :Modifier les informations du jeu (titre, description, prix, image, etc.);
+  elseif (Suppression de jeu?) then (Oui)
+    :Sélectionner le jeu à supprimer;
+    :Confirmer la suppression du jeu;
+  endif
+}
+|Wix Studio|
+:Prévisualiser les informations du jeu ajouté ou modifié;
+:Vérifier les informations du jeu (contenu, prix, image, etc.);
+|Admin|
+:Confirmer l'enregistrement des modifications (ajout, modification, suppression);
+|Wix Studio|
+:Mettre à jour la liste des jeux disponibles sur la plateforme;
+stop
+@enduml
