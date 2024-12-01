@@ -1,0 +1,21 @@
+@startuml
+!theme spacelab
+|Admin|
+start
+:Accéder au tableau de bord administrateur de Wix Studio;
+|Wix Studio|
+:Se connecter (si nécessaire);
+:Accéder à la section Blogue;
+|Admin|
+:Saisir le contenu du nouvel article;
+:Ajouter des images ou autres médias (si nécessaire);
+:Choisir la catégorie ou les tags (optionnel);
+|Wix Studio|
+:Prévisualiser l'article;
+:Vérifier les informations de l'article (contenu, média, tags);
+|Admin|
+:Confirmer la publication de l'article;
+|Wix Studio|
+:Publier l'article sur le blog;
+stop
+@enduml
