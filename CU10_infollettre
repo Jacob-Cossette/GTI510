@@ -1,0 +1,20 @@
+@startuml
+!theme spacelab
+|Admin|
+start
+:Accéder au panneau administrateur de Wix Studio;
+|Wix Studio|
+:Se connecter (si nécessaire);
+:Accéder à la section Infolettre;
+|Admin|
+:Saisir le contenu de l'infolettre;
+:Choisir les destinataires (tous les abonnés ou sélectionnés);
+|Wix Studio|
+:Prévisualiser l'infolettre;
+:Vérifier les informations d'envoi (destinataires, contenu);
+|Admin|
+:Confirmer l'envoi de l'infolettre;
+|Wix Studio|
+:Envoyer l'infolettre à tous les abonnés ou sélectionnés;
+stop
+@enduml
