@@ -1,0 +1,84 @@
+@startuml UsecaseDiagram
+title Processus (niveau 1)
+!theme spacelab
+
+left to right direction
+skinparam ArrowFontColor Black
+skinparam ArrowFontStyle Bold
+skinparam actorStyle awesome
+skinparam ActorFontColor Black
+skinparam ActorFontStyle Bold
+skinparam usecaseBorderColor Black
+
+actor "Utilisateur" as User #Green
+actor "Administrateur" as Admin #DarkRed
+actor "Discord" as Discord #DarkSlateBlue
+
+package Solution #Gainsboro {
+    component Infolettre {
+        (Écrire et envoyer une infolettre) as SendNewsletter
+        (S'abonner à l'infolettre) as SubscribeNewsletter
+        (Se désabonner de l'infolettre) as UnsubscribeNewsletter
+    }
+
+    component eCommerce {
+        (Consulter et acheter un jeu) as ViewAndBuyGame
+        (Consulter ses jeux) as ViewMyGames
+        (Modifier la liste des jeux) as EditGameList
+    }
+
+    component Social {
+        (Créer un compte) as CreateAccount
+        (Modfier son profil) as EditProfile
+        (Ajouter un contact) as AddContact
+        (Clavarder avec un contact &#40;texte ou vocal&#41;) as ChatWithContact
+    }
+
+    component Site {
+        (Consulter le contenu: site, blogue, réseaux sociaux) as ViewContent
+        (Publier dans le blogue) as PublishBlog
+        (Faire une modification thématique du site) as EditSiteTheme
+    }
+
+    (SendNewsletter) <-- Admin 
+    (PublishBlog) <-- Admin 
+    (EditGameList) <-- Admin 
+    (EditSiteTheme) <-- Admin 
+
+    User --> (ViewContent)
+    User --> (CreateAccount)
+    User --> (EditProfile)
+    User --> (ViewAndBuyGame)
+    User --> (ViewMyGames)
+    User --> (AddContact)
+    User --> (ChatWithContact)
+    User --> (SubscribeNewsletter)
+    User --> (UnsubscribeNewsletter)
+    User <-- (SendNewsletter) : Reçoit un courriel
+
+    (CreateAccount) --> Discord
+    (EditProfile) --> Discord
+    (AddContact) --> Discord
+    (ChatWithContact) --> Discord
+}
+
+note right of Admin {
+    Acteur
+}
+
+note right of Discord {
+    Acteur
+}
+
+note left of User {
+    Acteur
+}
+
+note right of EditProfile {
+    Cas d'utilisation
+}
+
+note left of Site {
+    Module de la solution
+}
+@enduml
