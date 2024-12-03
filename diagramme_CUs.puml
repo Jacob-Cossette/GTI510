@@ -15,6 +15,13 @@ actor "Administrateur" as Admin #DarkRed
 actor "Discord" as Discord #DarkSlateBlue
 
 package Solution #Gainsboro {
+    ' component "Général" as General {
+        (Créer un compte) as CreateAccount
+        (Consulter le contenu: site, blogue, réseaux sociaux) as ViewContent
+        (Publier dans le blogue) as PublishBlog
+        (Faire une modification thématique du site) as EditSiteTheme
+    ' }
+
     component Infolettre {
         (Écrire et envoyer une infolettre) as SendNewsletter
         (S'abonner à l'infolettre) as SubscribeNewsletter
@@ -28,16 +35,9 @@ package Solution #Gainsboro {
     }
 
     component Social {
-        (Créer un compte) as CreateAccount
         (Modfier son profil) as EditProfile
         (Ajouter un contact) as AddContact
         (Clavarder avec un contact &#40;texte ou vocal&#41;) as ChatWithContact
-    }
-
-    component Site {
-        (Consulter le contenu: site, blogue, réseaux sociaux) as ViewContent
-        (Publier dans le blogue) as PublishBlog
-        (Faire une modification thématique du site) as EditSiteTheme
     }
 
     (SendNewsletter) <-- Admin 
@@ -56,9 +56,6 @@ package Solution #Gainsboro {
     User --> (UnsubscribeNewsletter)
     User <-- (SendNewsletter) : Reçoit un courriel
 
-    (CreateAccount) --> Discord
-    (EditProfile) --> Discord
-    (AddContact) --> Discord
     (ChatWithContact) --> Discord
 }
 
@@ -78,7 +75,8 @@ note right of EditProfile {
     Cas d'utilisation
 }
 
-note left of Site {
+note right of Infolettre {
     Module de la solution
 }
+
 @enduml
