@@ -1,12 +1,17 @@
 @startuml
 !theme spacelab
+title Acheter un jeu
 |Utilisateur|
 start
 :Se connecter à son compte;
 :Accéder à la section "Boutique de jeux";
-:Parcourir la liste des jeux disponibles;
 |Site web Igame|
 :Afficher les jeux disponibles avec leurs descriptions et prix;
+|Utilisateur|
+:Parcourir la liste des jeux disponibles;
+:Accéder à la page du jeu;
+|Site web Igame|
+:Afficher les informations du jeu;
 |Utilisateur|
 if (Ajouter un jeu au panier?) then (Oui)
   :Ajouter le jeu au panier;

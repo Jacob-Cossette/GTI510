@@ -1,0 +1,21 @@
+@startuml
+!theme spacelab
+title Légende générale
+legend
+| Symbole        | Description                 |
+| Rectangle     | Représente une activité ou une étape. |
+| Flèche        | Indique le flux ou la transition. |
+| Losange       | Représente une décision avec des choix possibles. |
+| Cercle    plein    | Point de départ.    |
+| Cercle    anneau    | Point de fin.    |
+endlegend
+
+start
+:Exemple de rectangle;
+if (Exemple de losange?) then (Oui)
+  :Étape suivante;
+else (Non)
+  :Autre chemin;
+endif
+stop
+@enduml

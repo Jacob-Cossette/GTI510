@@ -1,0 +1,33 @@
+@startuml
+!theme spacelab
+title Ajouter un ami
+|Utilisateur|
+start
+:Accéder au site web Igame;
+:Se connecter à son compte;
+:Cliquer la barre de recherche;
+:Entrer un pseudonyme recherché;
+|Site web Igame|
+:Rechercher dans la base de données des utilisateurs;
+if (Utilisateur trouvé ?) then (Oui)
+    :Afficher une liste des utilisateurs correspondants;
+    |Utilisateur|
+    :Sélectionner un utilisateur dans la liste;
+    |Site web Igame|
+    :Envoyer une demande d'ami à l'utilisateur sélectionné;
+    |Utilisateur ciblé|
+    :Recevoir une notification de demande d'ami;
+    if (Accepter la demande ?) then (Oui)
+        :Accepter l'ajout d'ami;
+        |Site web Igame|
+        :Mettre à jour la liste d'amis des deux utilisateurs;
+    else (Non)
+        |Utilisateur ciblé|
+        :Refuser la demande d'ami;
+    endif
+else (Non)
+    |Site web Igame|
+    :Afficher un message "Aucun utilisateur trouvé";
+endif
+stop
+@enduml

@@ -1,10 +1,10 @@
 @startuml
 !theme spacelab
+title Modifier la bibliothèque de jeu vendu
 |Admin|
 start
+: Se connecter à Wix Studio;
 :Accéder au tableau de bord administrateur de Wix Studio;
-|Wix Studio|
-:Se connecter (si nécessaire);
 :Accéder à la section e-commerce ou Gestion des produits;
 |Admin|
 partition Choix d'action {

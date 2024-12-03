@@ -1,18 +1,21 @@
 @startuml
 !theme spacelab
+title Créer un blogue
 |Admin|
 start
+:Se connecter à Wix Studio;
 :Accéder au tableau de bord administrateur de Wix Studio;
-|Wix Studio|
-:Se connecter (si nécessaire);
 :Accéder à la section Blogue;
 |Admin|
+:Ajouter un blogue;
+|Wix Studio|
+:Enregistre un nouveau blogue;
+|Admin|
 :Saisir le contenu du nouvel article;
-:Ajouter des images ou autres médias (si nécessaire);
+:Ajouter des images ou autres médias (optionnel);
 :Choisir la catégorie ou les tags (optionnel);
 |Wix Studio|
 :Prévisualiser l'article;
-:Vérifier les informations de l'article (contenu, média, tags);
 |Admin|
 :Confirmer la publication de l'article;
 |Wix Studio|

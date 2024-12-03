@@ -1,5 +1,6 @@
 @startuml
 !theme spacelab
+title Inscription au SiteWeb
 |Utilisateur|
 start
 :Accéder à la page d'inscription;
@@ -13,15 +14,16 @@ if (Données valides?) then (Oui)
   :Envoyer un courriel de confirmation;
   |Utilisateur|
   :Recevoir le courriel de confirmation;
+
   :Confirmer l'adresse courriel via le lien fourni;
+
   |Site web Igame|
+
   :Activer le compte utilisateur;
 else (Non)
   :Retourner un message d'erreur (ex: données invalides);
   :Afficher le message d'erreur;
-  |Utilisateur|
 
-   :Corriger et soumettre à nouveau;
 endif
 stop
 @enduml

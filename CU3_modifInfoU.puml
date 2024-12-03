@@ -1,5 +1,6 @@
 @startuml
 !theme spacelab
+title Modifier les informations du profile
 |Utilisateur|
 start
 :Se connecter à son compte;
@@ -18,8 +19,6 @@ else (Non)
   |Site web Igame|
   :Retourner un message d'erreur (ex: données invalides);
   :Afficher le message d'erreur;
-  |Utilisateur|
-  :Corriger et soumettre à nouveau;
 endif
 stop
 @enduml

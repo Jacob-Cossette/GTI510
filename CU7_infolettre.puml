@@ -1,5 +1,6 @@
 @startuml
 !theme spacelab
+title Désabonnement à l'info-lettre
 |Utilisateur|
 start
 :Accéder à la section "Paramètres de l'infolettre";
@@ -10,6 +11,15 @@ start
   :Afficher "Désabonnement réussi";
   |Utilisateur|
   :Voir la confirmation du désabonnement;
+stop
+start
+:Recevoir un email de l'infolettre;
+:Cliquer sur "Se désabonner" dans l'email;
+|Site web Igame|
+:Retirer l'adresse courriel de la liste;
+:Envoyer un email de confirmation;
+|Utilisateur|
+:Recevoir l'email de confirmation;
 stop
 @enduml
 
