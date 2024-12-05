@@ -1,0 +1,82 @@
+@startuml UsecaseDiagram
+title Processus (niveau 1)
+!theme spacelab
+
+left to right direction
+skinparam ArrowFontColor Black
+skinparam ArrowFontStyle Bold
+skinparam actorStyle awesome
+skinparam ActorFontColor Black
+skinparam ActorFontStyle Bold
+skinparam usecaseBorderColor Black
+
+actor "Utilisateur" as User #Green
+actor "Administrateur" as Admin #DarkRed
+actor "Discord" as Discord #DarkSlateBlue
+
+package Solution #Gainsboro {
+    ' component "Général" as General {
+        (Créer un compte) as CreateAccount
+        (Consulter le contenu: site, blogue, réseaux sociaux) as ViewContent
+        (Publier dans le blogue) as PublishBlog
+        (Modifier le visuel du site web) as EditSiteTheme
+    ' }
+
+    component Infolettre {
+        (Écrire et envoyer une infolettre) as SendNewsletter
+        (S'abonner à l'infolettre) as SubscribeNewsletter
+        (Se désabonner de l'infolettre) as UnsubscribeNewsletter
+    }
+
+    component eCommerce {
+        (Consulter et acheter un jeu) as ViewAndBuyGame
+        (Accéder à ma bibliothèque de jeux) as ViewMyGames
+        (Modifier la bibliothèque de jeux vendus) as EditGameList
+    }
+
+    component Social {
+        (Modifier les informations du profil) as EditProfile
+        (Ajouter un contact) as AddContact
+        (Démarrer une discussion &#40;texte ou vocale&#41;) as ChatWithContact
+    }
+
+    (SendNewsletter) <-- Admin 
+    (PublishBlog) <-- Admin 
+    (EditGameList) <-- Admin 
+    (EditSiteTheme) <-- Admin 
+
+    User --> (ViewContent)
+    User --> (CreateAccount)
+    User --> (EditProfile)
+    User --> (ViewAndBuyGame)
+    User --> (ViewMyGames)
+    User --> (AddContact)
+    User --> (ChatWithContact)
+    User --> (SubscribeNewsletter)
+    User --> (UnsubscribeNewsletter)
+    User <-- (SendNewsletter) : Reçoit un courriel
+
+    (ChatWithContact) --> Discord
+}
+
+note right of Admin {
+    Acteur
+}
+
+note right of Discord {
+    Acteur
+}
+
+note left of User {
+    Acteur
+}
+
+note right of EditProfile {
+    Cas d'utilisation
+}
+
+note right of Infolettre {
+    Module de la solution
+}
+
+@enduml

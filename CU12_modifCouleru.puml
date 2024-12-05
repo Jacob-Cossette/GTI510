@@ -1,6 +1,6 @@
 @startuml
 !theme spacelab
-title Modifier le visuel du siteweb
+title Modifier le visuel du site web
 |Admin|
 start
 :Accéder au tableau de bord administrateur de Wix Studio;

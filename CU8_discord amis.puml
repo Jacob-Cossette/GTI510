@@ -1,6 +1,6 @@
 @startuml
 !theme spacelab
-title Ajouter un ami
+title Ajouter un contact
 |Utilisateur|
 start
 :Accéder au site web Igame;

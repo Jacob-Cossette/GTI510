@@ -1,14 +1,14 @@
 @startuml
 !theme spacelab
-title Écrire une info-lettre
+title Écrire et envoyer une infolettre
 |Admin|
 start
 :Se connecter à Wix Studio;
 :Accéder au tableau de bord administrateur de Wix Studio;
-:Accéder au panneau info-lettre;
-:Créer une info-lettre:
+:Accéder au panneau infolettre;
+:Créer une infolettre;
 |Wix Studio|
-:Enregistrer l'info-lettre;
+:Enregistrer l'infolettre;
 |Admin|
 :Saisir le contenu de l'infolettre;
 :Choisir les destinataires (tous les abonnés ou sélectionnés);

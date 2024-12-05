@@ -1,6 +1,6 @@
 @startuml
 !theme spacelab
-title Inscription au SiteWeb
+title Inscription au site web
 |Utilisateur|
 start
 :Accéder à la page d'inscription;

@@ -1,6 +1,6 @@
 @startuml
 !theme spacelab
-title Modifier la bibliothèque de jeu vendu
+title Modifier la bibliothèque de jeux vendus
 |Admin|
 start
 : Se connecter à Wix Studio;

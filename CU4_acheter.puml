@@ -1,6 +1,6 @@
 @startuml
 !theme spacelab
-title Acheter un jeu
+title Consulter et acheter un jeu
 |Utilisateur|
 start
 :Se connecter à son compte;
