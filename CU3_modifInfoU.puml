@@ -1,6 +1,6 @@
 @startuml
 !theme spacelab
-title Modifier les informations du profile
+title Modifier les informations du profil
 |Utilisateur|
 start
 :Se connecter à son compte;

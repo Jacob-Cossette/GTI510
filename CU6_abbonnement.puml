@@ -1,11 +1,11 @@
 @startuml
 !theme spacelab
-title Abonnement à l'info-lettre
+title Abonnement à l'infolettre
 |Utilisateur|
 start
 :Accéder au bas de la page d'accueil;
 :Entrer une adresse courriel dans le champ dédié;
-:Cliquer sur le bouton "S'abonner à l'info-lettre";
+:Cliquer sur le bouton "S'abonner à l'infolettre";
 |Site web Igame|
 :Vérifier la validité de l'adresse courriel;
 if (Adresse valide?) then (Oui)

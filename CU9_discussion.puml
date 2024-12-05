@@ -1,6 +1,6 @@
 @startuml
 !theme spacelab
-title Démarer une discution
+title Démarer une discussion
 |Utilisateur|
 start
 :Accéder au site web Igame;

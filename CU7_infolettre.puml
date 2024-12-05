@@ -1,6 +1,6 @@
 @startuml
 !theme spacelab
-title Désabonnement à l'info-lettre
+title Désabonnement à l'infolettre
 |Utilisateur|
 start
 :Accéder à la section "Paramètres de l'infolettre";
