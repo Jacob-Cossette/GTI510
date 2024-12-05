@@ -1,6 +1,6 @@
 @startuml
 !theme spacelab
-title Accéder au site web
+title Accéder au contenu du site web
 |Utilisateur|
 start
 :Accéder à l'URL principale du site;

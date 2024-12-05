@@ -13,13 +13,13 @@ start
   :Voir la confirmation du désabonnement;
 stop
 start
-:Recevoir un email de l'infolettre;
-:Cliquer sur "Se désabonner" dans l'email;
+:Recevoir un courriel de l'infolettre;
+:Cliquer sur "Se désabonner" dans le courriel;
 |Site web Igame|
 :Retirer l'adresse courriel de la liste;
-:Envoyer un email de confirmation;
+:Envoyer un courriel de confirmation;
 |Utilisateur|
-:Recevoir l'email de confirmation;
+:Recevoir le courriel de confirmation;
 stop
 @enduml
 
@@ -27,12 +27,12 @@ stop
 !theme spacelab
 |Utilisateur|
 start
-:Recevoir un email de l'infolettre;
-:Cliquer sur "Se désabonner" dans l'email;
+:Recevoir un courriel de l'infolettre;
+:Cliquer sur "Se désabonner" dans le courriel;
 |Site web Igame|
 :Retirer l'adresse courriel de la liste;
-:Envoyer un email de confirmation;
+:Envoyer un courriel de confirmation;
 |Utilisateur|
-:Recevoir l'email de confirmation;
+:Recevoir le courriel de confirmation;
 stop
 @enduml

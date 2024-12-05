@@ -1,6 +1,6 @@
 @startuml
 !theme spacelab
-title Accéder à la bibliothèque de jeux
+title Accéder à ma bibliothèque de jeux
 |Utilisateur|
 start
 :Se connecter à son compte;

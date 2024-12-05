@@ -19,7 +19,7 @@ package Solution #Gainsboro {
         (Créer un compte) as CreateAccount
         (Consulter le contenu: site, blogue, réseaux sociaux) as ViewContent
         (Publier dans le blogue) as PublishBlog
-        (Faire une modification thématique du site) as EditSiteTheme
+        (Modifier le visuel du site web) as EditSiteTheme
     ' }
 
     component Infolettre {
@@ -30,14 +30,14 @@ package Solution #Gainsboro {
 
     component eCommerce {
         (Consulter et acheter un jeu) as ViewAndBuyGame
-        (Consulter ses jeux) as ViewMyGames
-        (Modifier la liste des jeux) as EditGameList
+        (Accéder à ma bibliothèque de jeux) as ViewMyGames
+        (Modifier la bibliothèque de jeux vendus) as EditGameList
     }
 
     component Social {
-        (Modfier son profil) as EditProfile
+        (Modifier les informations du profil) as EditProfile
         (Ajouter un contact) as AddContact
-        (Clavarder avec un contact &#40;texte ou vocal&#41;) as ChatWithContact
+        (Démarrer une discussion &#40;texte ou vocale&#41;) as ChatWithContact
     }
 
     (SendNewsletter) <-- Admin 

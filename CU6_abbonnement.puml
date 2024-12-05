@@ -1,6 +1,6 @@
 @startuml
 !theme spacelab
-title Abonnement à l'infolettre
+title S'abonner à l'infolettre
 |Utilisateur|
 start
 :Accéder au bas de la page d'accueil;
